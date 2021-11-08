@@ -817,7 +817,7 @@ async def about_me(message):
         f"<b>Telethon Version</b>: {telever}\n"
         f"<b>Pyrogram Version</b>: {pyrover}\n"
         "<b>Created By</b>: @Yaknight\n\n"
-        "<b>Modified By</b>: @KangersHub\n\n"
+        "<b>Modified By</b>: @shado_hackers\n\n"
         "<u>Currents Configs:-</u>\n\n"
         f"<b>Bot Uptime:-</b> {diff}\n"
         "<b>Torrent Download Engine:-</b> <code>qBittorrent [4.3.0 fix active]</code> \n"
