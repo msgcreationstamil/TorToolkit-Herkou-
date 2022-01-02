@@ -933,7 +933,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "The bot is booted and is ready to use.")
+            await client.send_message(i, "𝙽𝚎𝚡𝚕𝚎𝚎𝚌𝚑  𝚒𝚜 𝚋𝚘𝚘𝚝𝚎𝚍 , 𝚛𝚎𝚊𝚍𝚢 𝚝𝚘 𝚞𝚜𝚎..")
         except Exception:
             torlog.info(f"Not found the entity {i}")
 
