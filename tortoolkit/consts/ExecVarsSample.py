@@ -31,10 +31,10 @@ except:
         FORCE_DOCUMENTS = False
 
         # Chracter to use as a completed progress
-        COMPLETED_STR = "▰"
+        COMPLETED_STR = "🖤"
 
         # Chracter to use as a incomplete progress
-        REMAINING_STR = "▱"
+        REMAINING_STR = "⚪"
 
         # DB URI for access
         DATABASE_URL = (
