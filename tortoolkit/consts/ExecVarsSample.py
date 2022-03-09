@@ -25,7 +25,7 @@ except:
         EDIT_SLEEP_SECS = 10
 
         # Telegram Upload Limit (in bytes)
-        TG_UP_LIMIT = 1800000000
+        TG_UP_LIMIT = 1900000000
 
         # Should force evething uploaded into Document
         FORCE_DOCUMENTS = False
