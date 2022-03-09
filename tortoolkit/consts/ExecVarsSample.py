@@ -25,7 +25,7 @@ except:
         EDIT_SLEEP_SECS = 10
 
         # Telegram Upload Limit (in bytes)
-        TG_UP_LIMIT = 1700000000
+        TG_UP_LIMIT = 1800000000
 
         # Should force evething uploaded into Document
         FORCE_DOCUMENTS = False
@@ -54,8 +54,8 @@ except:
         RCLONE_BASE_DIR = "/"
         
         # Instagram Credentials Stuff [( if you want InstaDL to work :)]
-        INSTA_UNAME = "@nexleech"
-        INSTA_PASS = "noobleech"
+        INSTA_UNAME = ""
+        INSTA_PASS =""
 
         # This value will be considered only if Rclone is True - this may be defied now ;)
         # Cuz at least one needs to be Ture at a time either RCLONE or Leech.
