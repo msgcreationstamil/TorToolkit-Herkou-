@@ -15,8 +15,8 @@ except:
         SERVPORT = 80
 
         # ALLOWED USERS [ids of user or supergroup] seperate by commas
-        ALD_USR = []
-        OWNER_ID = 0
+        ALD_USR = [828959161 , -1001462883083]
+        OWNER_ID = "828959161"
 
         # Google Drive Index Link should include the base dir also See readme for more info
         GD_INDEX_URL = False
@@ -31,10 +31,10 @@ except:
         FORCE_DOCUMENTS = False
 
         # Chracter to use as a completed progress
-        COMPLETED_STR = "🖤"
+        COMPLETED_STR = "★"
 
         # Chracter to use as a incomplete progress
-        REMAINING_STR = "⚪"
+        REMAINING_STR = "⊛"
 
         # DB URI for access
         DATABASE_URL = (
@@ -75,10 +75,10 @@ except:
         DEF_RCLONE_DRIVE = ""
 
         # Max size of a playlist that is allowed (Number of videos)
-        MAX_YTPLAYLIST_SIZE = 20
+        MAX_YTPLAYLIST_SIZE = 50
 
         # Max size of the torrent allowed
-        MAX_TORRENT_SIZE = 10
+        MAX_TORRENT_SIZE = 50
 
         # Custom Trackers for QBT..
         ADD_CUSTOM_TRACKERS = True
