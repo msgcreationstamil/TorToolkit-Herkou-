@@ -6,10 +6,10 @@ except:
         # Set true if its VPS
         IS_VPS = False
 
-        API_HASH = ""
-        API_ID = 0
-        BOT_TOKEN = ""
-        BASE_URL_OF_BOT = ""
+        API_HASH = "c7abaf25c9fb8ff90d882777b275f4e0"
+        API_ID = "7863038"
+        BOT_TOKEN = "1880548732:AAEzASDcPx0D9UibII8ZGpvjyZITpgaPj10"
+        BASE_URL_OF_BOT = "http:// 52.172.9.191"
 
         # Edit the server port if you want to keep it default though.
         SERVPORT = 80
@@ -37,9 +37,9 @@ except:
         REMAINING_STR = "⊛"
 
         # DB URI for access
-        DATABASE_URL = (
-            "dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"
-        )
+        #DATABASE_URL = (
+            #"dbname=tortk user=postgres password=your-pass host=127.0.0.1 port=5432"
+     #   )
 
         # UNCOMMENT THE BELOW LINE WHEN USING CONTAINER AND COMMENT THE UPPER LINE
         # DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=db port=5432"
