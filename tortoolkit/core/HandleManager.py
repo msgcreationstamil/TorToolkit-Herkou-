@@ -610,7 +610,7 @@ async def set_password_zip(message):
             await message.reply(f"Cannot update the password this is not your download.")
 
 async def start_handler(event):
-    msg = "Hello This is TorToolkit an instance of <a href='https://github.com/yash-dk/TorToolkit-Telegram'>This Repo</a>. Try the repo for yourself and dont forget to put a STAR and fork."
+    msg = "Hello This is TorToolkit an instance of<a href='https://t.me//shado_hackers'>create</a>. <a href='https://t.me//nexleech'>group</a>."
     await event.reply(msg, parse_mode="html")
 
 def progress_bar(percentage):
@@ -703,26 +703,26 @@ async def handle_server_command(message):
 
     if callbk:
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            "<b>CPU STATS:-</b>\n"
-            f"Cores: {cores} Logical: {lcores}\n"
-            f"CPU Frequency: {freqcurrent}  Mhz Max: {freqmax}\n"
-            f"CPU Utilization: {cpupercent}%\n"
+            f"<b>⚡BOT UPTIME:-</b> {diff}\n\n"
+            "<b>💾CPU STATS:-</b>\n"
+            f"⭐Cores: {cores} Logical: {lcores}\n"
+            f"🌟CPU Frequency: {freqcurrent}  Mhz Max: {freqmax}\n"
+            f"🌡️CPU Utilization: {cpupercent}%\n"
             "\n"
-            "<b>STORAGE STATS:-</b>\n"
+            "<b>💾STORAGE STATS:-</b>\n"
             f"Total: {totaldsk}\n"
             f"Used: {useddsk}\n"
             f"Free: {freedsk}\n"
             "\n"
-            "<b>MEMORY STATS:-</b>\n"
-            f"Available: {memavailable}\n"
-            f"Total: {memtotal}\n"
-            f"Usage: {mempercent}%\n"
-            f"Free: {memfree}\n"
+            "<b>🌡️MEMORY STATS:-</b>\n"
+            f"📈Available: {memavailable}\n"
+            f"🗃️Total: {memtotal}\n"
+            f"📊Usage: {mempercent}%\n"
+            f"📂Free: {memfree}\n"
             "\n"
-            "<b>TRANSFER INFO:</b>\n"
-            f"Download: {dlb}\n"
-            f"Upload: {upb}\n"
+            "<b>📨TRANSFER INFO:</b>\n"
+            f"📥Download: {dlb}\n"
+            f"📤Upload: {upb}\n"
         )
         await message.edit(msg, parse_mode="html", buttons=None)
     else:
@@ -733,14 +733,14 @@ async def handle_server_command(message):
 
         
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            f"CPU Utilization: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
-            f"Storage used:- {progress_bar(storage_percent)} - {storage_percent}%\n"
-            f"Total: {totaldsk} Free: {freedsk}\n\n"
-            f"Memory used:- {progress_bar(mempercent)} - {mempercent}%\n"
-            f"Total: {memtotal} Free: {memfree}\n\n"
-            f"Transfer Download:- {dlb}\n"
-            f"Transfer Upload:- {upb}\n"
+            f"<b>❄️BOT UPTIME:-</b> {diff}\n\n"
+            f"⚠️CPU Utilization: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
+            f"💾Storage used:- {progress_bar(storage_percent)} - {storage_percent}%\n"
+            f"📦Total: {totaldsk} Free: {freedsk}\n\n"
+            f"📈Memory used:- {progress_bar(mempercent)} - {mempercent}%\n"
+            f"📊Total: {memtotal} Free: {memfree}\n\n"
+            f"📩Transfer Download:- {dlb}\n"
+            f"📤Transfer Upload:- {upb}\n"
         )
         await message.reply(msg, parse_mode="html", buttons=[[KeyboardButtonCallback("Get detailed stats.","fullserver")]])
 
@@ -780,7 +780,7 @@ async def about_me(message):
         f"<b>Version</b>: <code>{__version__}</code>\n"
         f"<b>Telethon Version</b>: {telever}\n"
         f"<b>Pyrogram Version</b>: {pyrover}\n"
-        "<b>Created By</b>: @yaknight\n\n"
+        "<b>Created By</b>: @shado_hackers\n\n"
         "<u>Currents Configs:-</u>\n\n"
         f"<b>Bot Uptime:-</b> {diff}\n"
         "<b>Torrent Download Engine:-</b> <code>qBittorrent [4.3.0 fix active]</code> \n"
@@ -885,7 +885,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "The bot is booted and is ready to use.")
+            await client.send_message(i, "𝙽𝚎𝚡𝚕𝚎𝚎𝚌𝚑  𝚒𝚜 𝚋𝚘𝚘𝚝𝚎𝚍 ⚡, 𝚛𝚎𝚊𝚍𝚢 𝚝𝚘 𝚞𝚜𝚎🚨,𝙺𝚒𝚗𝚍𝚕𝚢 𝚛𝚎 𝚜𝚎𝚗𝚍 𝚕𝚒𝚗𝚔𝚜👩‍💻")
         except Exception as e:
             torlog.info(f"Not found the entity {i}")
 def command_process(command):
