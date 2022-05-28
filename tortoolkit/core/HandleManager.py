@@ -252,14 +252,14 @@ def add_handlers(bot: TelegramClient):
 
 async def handle_leech_command(e):
     if not e.is_reply:
-        await e.reply("Reply to a link or magnet")
+        await e.reply("📎Reply to a link or magnet✨")
     else:
         rclone = False
         tsp = time.time()
-        buts = [[KeyboardButtonCallback("To Telegram", data=f"leechselect tg {tsp}")]]
+        buts = [[KeyboardButtonCallback("📥To Telegram", data=f"leechselect tg {tsp}")]]
         if await get_config() is not None:
             buts.append(
-                [KeyboardButtonCallback("To Drive", data=f"leechselect drive {tsp}")]
+                [KeyboardButtonCallback("📨To Drive", data=f"leechselect drive {tsp}")]
             )
         # tsp is used to split the callbacks so that each download has its own callback
         # cuz at any time there are 10-20 callbacks linked for leeching XD
@@ -280,7 +280,7 @@ async def handle_leech_command(e):
         )
 
         conf_mes = await e.reply(
-            f"First click if you want to zip the contents or extract as an archive (only one will work at a time) then...\n\n<b>Choose where to upload your files:-</b>\nThe files will be uploaded to default destination: <b>{get_val('DEFAULT_TIMEOUT')}</b> after 60 sec of no action by user.</u>\n\n<b>Supported archives to extract:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
+            f"👇First click if you want to zip the contents or extract as an archive 🗂️(only one will work at a time) then...\n\n<b>Choose where to upload your files:-</b>\nThe files will be uploaded to default destination: <b>{get_val('DEFAULT_TIMEOUT')}</b> after 60 sec of no action by user.</u>\n\n<b>Supported archives to extract:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
             parse_mode="html",
             buttons=buts,
         )
@@ -311,14 +311,14 @@ async def handle_leech_command(e):
                 await check_link(e, rclone, is_zip, is_ext, conf_mes)
             else:
                 await e.reply(
-                    "<b>DRIVE IS DISABLED BY THE ADMIN</b>", parse_mode="html"
+                    "<b>❌DRIVE IS DISABLED BY THE ADMIN😏</b>", parse_mode="html"
                 )
         else:
             if get_val("LEECH_ENABLED"):
                 await check_link(e, rclone, is_zip, is_ext, conf_mes)
             else:
                 await e.reply(
-                    "<b>TG LEECH IS DISABLED BY THE ADMIN</b>", parse_mode="html"
+                    "<b>🚦TG LEECH IS DISABLED BY THE ADMIN😏</b>", parse_mode="html"
                 )
 
 
@@ -477,7 +477,7 @@ async def handle_settings_cb(e):
     if await is_admin(e.client, e.sender_id, e.chat_id):
         await handle_setting_callback(e)
     else:
-        await e.answer("⚠️ WARN ⚠️ Dont Touch Admin Settings.", alert=True)
+        await e.answer("⚠️ WARN ⚠️ Dont Touch Admin Settings❌.", alert=True)
 
 
 async def handle_upcancel_cb(e):
@@ -537,7 +537,7 @@ async def callback_handler_canc(e):
         torlog.info(f"Hashid :- {hashid}")
 
         await cancel_torrent(hashid, is_aria, is_mega)
-        await e.answer("Leech has been canceled in ADMIN MODE XD ;)", alert=True)
+        await e.answer("😏Leech has been canceled in ADMIN MODE XD ;)", alert=True)
     else:
         await e.answer("Can't Cancel others leech 😡", alert=True)
 
@@ -592,12 +592,12 @@ async def handle_pincode_cb(e):
         db = tor_db
         passw = db.get_password(data[1])
         if isinstance(passw, bool):
-            await e.answer("torrent expired download has been started now.")
+            await e.answer("🕔torrent expired download has been started now🚦.")
         else:
-            await e.answer(f"Your Pincode is {passw}", alert=True)
+            await e.answer(f"🔢Your Pincode is {passw}", alert=True)
 
     else:
-        await e.answer("It's not your torrent.", alert=True)
+        await e.answer("It's not your torrent😡.", alert=True)
 
 
 async def upload_document_f(message):
@@ -737,26 +737,26 @@ async def handle_server_command(message):
 
     if callbk:
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            "<b>CPU STATS:-</b>\n"
-            f"Cores: {cores} Logical: {lcores}\n"
-            f"CPU Frequency: {freqcurrent}  Mhz Max: {freqmax}\n"
-            f"CPU Utilization: {cpupercent}%\n"
+            f"<b>⚡BOT UPTIME:-</b> {diff}\n\n"
+            "<b>💾CPU STATS:-</b>\n"
+            f"⭐Cores: {cores} Logical: {lcores}\n"
+            f"🌟CPU Frequency: {freqcurrent}  Mhz Max: {freqmax}\n"
+            f"🌡️CPU Utilization: {cpupercent}%\n"
             "\n"
-            "<b>STORAGE STATS:-</b>\n"
+            "<b>💾STORAGE STATS:-</b>\n"
             f"Total: {totaldsk}\n"
             f"Used: {useddsk}\n"
             f"Free: {freedsk}\n"
             "\n"
-            "<b>MEMORY STATS:-</b>\n"
-            f"Available: {memavailable}\n"
-            f"Total: {memtotal}\n"
-            f"Usage: {mempercent}%\n"
-            f"Free: {memfree}\n"
+            "<b>🌡️MEMORY STATS:-</b>\n"
+            f"📈Available: {memavailable}\n"
+            f"🗃️Total: {memtotal}\n"
+            f"📊Usage: {mempercent}%\n"
+            f"📂Free: {memfree}\n"
             "\n"
-            "<b>TRANSFER INFO:</b>\n"
-            f"Download: {dlb}\n"
-            f"Upload: {upb}\n"
+            "<b>📨TRANSFER INFO:</b>\n"
+            f"📥Download: {dlb}\n"
+            f"📤Upload: {upb}\n"
         )
         await message.edit(msg, parse_mode="html", buttons=None)
     else:
@@ -766,14 +766,14 @@ async def handle_server_command(message):
             storage_percent = 0
 
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            f"CPU Utilization: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
-            f"Storage used:- {progress_bar(storage_percent)} - {storage_percent}%\n"
-            f"Total: {totaldsk} Free: {freedsk}\n\n"
-            f"Memory used:- {progress_bar(mempercent)} - {mempercent}%\n"
-            f"Total: {memtotal} Free: {memfree}\n\n"
-            f"Transfer Download:- {dlb}\n"
-            f"Transfer Upload:- {upb}\n"
+            f"<b>❄️BOT UPTIME:-</b> {diff}\n\n"
+            f"⚠️CPU Utilization: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
+            f"💾Storage used:- {progress_bar(storage_percent)} - {storage_percent}%\n"
+            f"📦Total: {totaldsk} Free: {freedsk}\n\n"
+            f"📈Memory used:- {progress_bar(mempercent)} - {mempercent}%\n"
+            f"📊Total: {memtotal} Free: {memfree}\n\n"
+            f"📩Transfer Download:- {dlb}\n"
+            f"📤Transfer Upload:- {upb}\n"
         )
         await message.reply(
             msg,
@@ -933,7 +933,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "𝙽𝚎𝚡𝚕𝚎𝚎𝚌𝚑  𝚒𝚜 𝚋𝚘𝚘𝚝𝚎𝚍 , 𝚛𝚎𝚊𝚍𝚢 𝚝𝚘 𝚞𝚜𝚎..")
+            await client.send_message(i, "𝙼𝚎𝚑!😏  𝚒𝚜 𝚋𝚘𝚘𝚝𝚎𝚍 ⚡, 𝚛𝚎𝚊𝚍𝚢 𝚝𝚘 𝚞𝚜𝚎🚨,𝙺𝚒𝚗𝚍𝚕𝚢 𝚛𝚎 𝚜𝚎𝚗𝚍 𝚕𝚒𝚗𝚔𝚜👩‍💻")
         except Exception:
             torlog.info(f"Not found the entity {i}")
 
