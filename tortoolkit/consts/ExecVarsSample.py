@@ -42,7 +42,7 @@ except:
         #)
 
         # UNCOMMENT THE BELOW LINE WHEN USING CONTAINER AND COMMENT THE UPPER LINE
-         DATABASE_URL = "dbname=tortk user=postgres password=your-pass host=db port=5432"
+         DATABASE_URL = "postgres://pzoagsxv:tvu1LFr0SZtxbevc55Xzi82d8_PnrJ3b@fanny.db.elephantsql.com/pzoagsxv"
 
         # MEGA CONFIG
         MEGA_ENABLE = False
