@@ -7,12 +7,12 @@ except:
         IS_VPS = False
 
         API_HASH = ""
-        API_ID = 0
-        BOT_TOKEN = ""
+        API_ID = "1428490"
+        BOT_TOKEN = "1880548732:AAEzASDcPx0D9UibII8ZGpvjyZITpgaPj10"
         BASE_URL_OF_BOT = ""
 
         # Edit the server port if you want to keep it default though.
-        SERVPORT = 80
+        SERVPORT = "80"
 
         # ALLOWED USERS [ids of user or supergroup] seperate by commas
         ALD_USR = [828959161,-1001462883083]
