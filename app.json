@@ -9,7 +9,7 @@
     "uploader",
     "rclone"
   ],
-  "success_url": "https://github.com/msgsubusurya/MSG",
+  "success_url": "https://github.com/msgcreationstamil/TorToolkit-Herkou-",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
@@ -80,7 +80,7 @@
     {
       "plan": "heroku-postgresql",
       "options": {
-        "version": "11"
+        "version": "14"
       }
     }
   ]
